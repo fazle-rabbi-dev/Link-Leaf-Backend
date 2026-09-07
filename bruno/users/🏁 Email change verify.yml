@@ -1,0 +1,26 @@
+info:
+  name: 🏁 Email change verify
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/change-email/verify"
+  body:
+    type: form-urlencoded
+    data:
+      - name: currentPassword
+        value: "000111"
+        disabled: true
+      - name: newEmail
+        value: ladelot610@5nek.com
+        disabled: true
+      - name: token
+        value: 57e3c877599ba5ddaf194e5befbe333fcad9c1ce4172d8e5b9aa8dd2a551b5e8
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

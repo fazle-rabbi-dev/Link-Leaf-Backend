@@ -1,0 +1,21 @@
+info:
+  name: Publish
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{base_url}}/publish"
+  body:
+    type: form-urlencoded
+    data:
+      - name: position
+        value: bottom
+        disabled: true
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

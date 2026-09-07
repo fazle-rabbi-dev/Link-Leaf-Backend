@@ -1,0 +1,8 @@
+{
+	"watch": [
+		"src",
+		"openapi.yaml"
+	],
+	"ext": "ts,yaml",
+	"exec": "tsx src/index.ts"
+}

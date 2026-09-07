@@ -1,0 +1,8 @@
+name: local
+variables:
+  - name: base_url
+    value: http://localhost:5000/api/v1/profile
+  - name: custom_link_base_url
+    value: http://localhost:5000/api/v1/profile/links/custom
+  - name: social_link_base_url
+    value: http://localhost:5000/api/v1/profile/links/social

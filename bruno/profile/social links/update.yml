@@ -1,0 +1,20 @@
+info:
+  name: update
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{social_link_base_url}}/6a8eb391a80101e77aae4a13"
+  body:
+    type: form-urlencoded
+    data:
+      - name: url
+        value: https://t.me/rabbi
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

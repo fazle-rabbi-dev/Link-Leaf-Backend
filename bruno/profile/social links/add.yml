@@ -1,0 +1,22 @@
+info:
+  name: add
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{social_link_base_url}}"
+  body:
+    type: form-urlencoded
+    data:
+      - name: platform
+        value: github
+      - name: url
+        value: https://x.com/rabbi
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

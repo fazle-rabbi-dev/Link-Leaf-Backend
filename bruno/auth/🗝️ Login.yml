@@ -1,0 +1,31 @@
+info:
+  name: 🗝️ Login
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/login"
+  body:
+    type: form-urlencoded
+    data:
+      - name: username
+        value: johndoe
+      - name: password
+        value: "000111"
+      - name: email
+        value: fazlerabbi1343@gmail.com
+        disabled: true
+      - name: email
+        value: byquviqa@fxzig.com
+        disabled: true
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTE5NjA4ODM5NmY1ZmQxNmFkY2E1MWEiLCJ1c2VybmFtZSI6InJhYmJpIiwiaWF0IjoxNzgwMDQ4MDUxLCJleHAiOjE3ODAwNTE2NTF9.mGlqFZsMDyW18wWTxU3Ibciztc6-DFZG7yjqoKM4-XE
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

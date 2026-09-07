@@ -1,0 +1,15 @@
+info:
+  name: "toggle: active"
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{custom_link_base_url}}/6a966e89fb9e2244f26baa9f/toggle"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

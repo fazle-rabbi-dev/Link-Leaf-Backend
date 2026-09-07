@@ -1,0 +1,26 @@
+opencollection: 1.0.0
+
+info:
+  name: auth
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+
+request:
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTE5NjA4ODM5NmY1ZmQxNmFkY2E1MWEiLCJ1c2VybmFtZSI6InJhYmJpIiwiaWF0IjoxNzgwMTIzNzU1LCJleHAiOjE3ODAxMjczNTV9.mpL_XMIRUJpQEPa5J2_8-2JZSDtRRWPJ6Gu5mDx9ADU
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

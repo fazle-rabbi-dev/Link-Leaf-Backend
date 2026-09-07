@@ -1,0 +1,26 @@
+info:
+  name: ✅ Verify email
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/verify-email"
+  params:
+    - name: token
+      value: d693a030afeb6cba95ef13eb6f36737c663441eb094a3792a1413cabc004b585
+      type: query
+      disabled: true
+  body:
+    type: form-urlencoded
+    data:
+      - name: token
+        value: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

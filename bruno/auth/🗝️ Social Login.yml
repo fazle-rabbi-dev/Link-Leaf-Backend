@@ -1,0 +1,22 @@
+info:
+  name: 🗝️ Social Login
+  type: http
+  seq: 11
+
+http:
+  method: POST
+  url: "{{base_url}}/social-login"
+  body:
+    type: form-urlencoded
+    data:
+      - name: userId
+        value: jhFTTW4pjPMpooMIcpFfIhdHSwF3
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTE5NjA4ODM5NmY1ZmQxNmFkY2E1MWEiLCJ1c2VybmFtZSI6InJhYmJpIiwiaWF0IjoxNzgwMDQ4MDUxLCJleHAiOjE3ODAwNTE2NTF9.mGlqFZsMDyW18wWTxU3Ibciztc6-DFZG7yjqoKM4-XE
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

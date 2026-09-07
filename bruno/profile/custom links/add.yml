@@ -1,0 +1,26 @@
+info:
+  name: add
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{custom_link_base_url}}"
+  body:
+    type: json
+    data: |-
+      {
+        "title": "Github",
+        "url": "https://djfd.com",
+        "icon": {
+          "kind": "emoji",
+          "value": "⭐"
+        }
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

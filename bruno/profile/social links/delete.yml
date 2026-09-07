@@ -1,0 +1,15 @@
+info:
+  name: delete
+  type: http
+  seq: 3
+
+http:
+  method: DELETE
+  url: "{{social_link_base_url}}/6a8eab58a80101e77aae4a04"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

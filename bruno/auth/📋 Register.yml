@@ -1,0 +1,27 @@
+info:
+  name: 📋 Register
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/register"
+  body:
+    type: form-urlencoded
+    data:
+      - name: name
+        value: sdfdfdfdfd
+      - name: username
+        value: auth
+      - name: email
+        value: fazlerabbi1343@gmail.com
+      - name: password
+        value: "000111"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

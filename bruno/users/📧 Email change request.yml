@@ -1,0 +1,25 @@
+info:
+  name: 📧 Email change request
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/change-email/request"
+  body:
+    type: form-urlencoded
+    data:
+      - name: currentPassword
+        value: "0001112"
+      - name: newEmail
+        value: ladelot610@5nek.com
+      - name: newEmail
+        value: byquviqa@fxzig.com
+        disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

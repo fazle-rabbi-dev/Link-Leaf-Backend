@@ -1,0 +1,24 @@
+info:
+  name: 📋 Update user
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{base_url}}/me"
+  body:
+    type: multipart-form
+    data:
+      - name: bio
+        type: text
+        value: Full-stack developer based on London
+      - name: avatarUrl
+        type: text
+        value: https://res.cloudinary.com/solo-apps/image/upload/v1787572829/foliyo/users/avatars/eegifksmb74h4haridci.jpg
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

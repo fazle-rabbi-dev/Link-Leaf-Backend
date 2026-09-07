@@ -1,0 +1,20 @@
+info:
+  name: Social position
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{base_url}}/social-icon-position"
+  body:
+    type: form-urlencoded
+    data:
+      - name: position
+        value: bottom
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,21 @@
+info:
+  name: 📤 Resend verification email
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/resend-verification-email"
+  body:
+    type: form-urlencoded
+    data:
+      - name: email
+        value: byquviqa@fxzig.com
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

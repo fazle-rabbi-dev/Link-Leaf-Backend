@@ -1,0 +1,25 @@
+info:
+  name: reorder
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{social_link_base_url}}/reorder"
+  body:
+    type: json
+    data: |-
+      {
+        "links": [
+          "6a2a604baf4ab6eb7a53d909",
+          "6a2a6031af4ab6eb7a53d8f9",
+          "6a2a6025af4ab6eb7a53d8f4"
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

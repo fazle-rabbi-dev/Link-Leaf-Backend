@@ -1,0 +1,18 @@
+info:
+  name: Get public profile copy
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: https://link-leaf-backend-backup.vercel.app/api-docs/specs#/
+  auth:
+    type: bearer
+    token: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

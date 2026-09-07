@@ -1,0 +1,26 @@
+info:
+  name: ✅ Recover account
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/change-email/revert"
+  body:
+    type: form-urlencoded
+    data:
+      - name: currentPassword
+        value: "000111"
+        disabled: true
+      - name: newEmail
+        value: ladelot610@5nek.com
+        disabled: true
+      - name: token
+        value: c7d8bfdae0fe6947e8e904039fc3c4f4f416b1e4fcb4ffe4835d25ca14e9d9d0
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

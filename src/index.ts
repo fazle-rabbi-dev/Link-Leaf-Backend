@@ -10,10 +10,13 @@ import logger from "./utils/logger.js";
 
 const port = envConfig.port;
 
-connectDb();
+const startServer = async () => {
+	await connectDb(); // ← wait for connection first
+	app.listen(port, () => {
+		logger.info(`Server running on http://localhost:${port}`);
+	});
+};
 
-app.listen(port, () => {
-	logger.info(`Server running on http://localhost:${port}`);
-});
+startServer();
 
 export default app;

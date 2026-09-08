@@ -190,7 +190,7 @@ export const login = asyncHandler(async (req: Request, res: Response) => {
 	res.cookie("sessionId", existingUser.auth.sessions[existingUser.auth.sessions.length - 1]?._id, {
 		httpOnly: true,
 		secure: true,
-		sameSite: "strict",
+		sameSite: "none",
 		maxAge: 1000 * 60 * 60 * 24 * 7,
 	});
 
@@ -326,7 +326,7 @@ export const socialLogin = asyncHandler(async (req: Request, res: Response) => {
 	res.cookie("sessionId", user.auth.sessions[user.auth.sessions.length - 1]?._id, {
 		httpOnly: true,
 		secure: true,
-		sameSite: "strict",
+		sameSite: "none",
 		maxAge: 1000 * 60 * 60 * 24 * 7,
 	});
 

@@ -7,16 +7,19 @@ import envConfig from "./config/env.js";
 import app from "./app.js";
 import connectDb from "./config/connect-db.js";
 import logger from "./utils/logger.js";
+import chalk from "chalk";
 
-const port = envConfig.port;
+const PORT = envConfig.port;
 
-const startServer = async () => {
-	await connectDb(); // ← wait for connection first
-	app.listen(port, () => {
-		logger.info(`Server running on http://localhost:${port}`);
+(async () => {
+	await connectDb();
+
+	app.listen(PORT, (err) => {
+		if (!err) {
+			console.log(chalk.bold.magenta("✓ Server running on: http://localhost:" + PORT));
+		} else {
+			console.log(chalk.bold.red("✘ Failed to start server! Try again."));
+			logger.error(err);
+		}
 	});
-};
-
-startServer();
-
-export default app;
+})();

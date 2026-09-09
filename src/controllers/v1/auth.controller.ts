@@ -190,7 +190,7 @@ export const login = asyncHandler(async (req: Request, res: Response) => {
 	res.cookie("sessionId", existingUser.auth.sessions[existingUser.auth.sessions.length - 1]?._id, {
 		httpOnly: true,
 		secure: true,
-		sameSite: "none",
+		sameSite: "lax",
 		maxAge: 1000 * 60 * 60 * 24 * 7,
 	});
 
@@ -326,7 +326,7 @@ export const socialLogin = asyncHandler(async (req: Request, res: Response) => {
 	res.cookie("sessionId", user.auth.sessions[user.auth.sessions.length - 1]?._id, {
 		httpOnly: true,
 		secure: true,
-		sameSite: "none",
+		sameSite: "lax",
 		maxAge: 1000 * 60 * 60 * 24 * 7,
 	});
 
@@ -591,10 +591,10 @@ export const logout = asyncHandler(async (req: Request, res: Response) => {
 	const { refreshToken: token, sessionId } = req.cookies;
 
 	if (!token) {
-		throw new ApiError({
-			statusCode: 400,
-			message: "Refresh token cookie is missing",
-		});
+		res.clearCookie("accessToken");
+		res.clearCookie("refreshToken");
+		res.clearCookie("sessionId");
+		return apiResponse({ res, statusCode: 200, message: "Logged out successfully" });
 	}
 
 	const decodedJwt = verifyJwt<{ _id: string }>(token, envConfig.refreshTokenSecret);

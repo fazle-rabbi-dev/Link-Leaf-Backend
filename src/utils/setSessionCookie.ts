@@ -12,7 +12,8 @@ export const setRefreshTokenCookie = (res: Response, refreshToken: string) => {
 
 export const setSessioinCookie = (res: Response, accessToken: string, refreshToken: string) => {
 	res.cookie("accessToken", accessToken, {
-		httpOnly: true,
+		// intentinally "not httpOnly" to read from nextjs client side during crud operations
+		httpOnly: false,
 		secure: true,
 		sameSite: "lax",
 		maxAge: envConfig.isDev ? 7 * 24 * 60 * 60 * 1000 : 60 * 60 * 1000, // if dev mode: 7d else 1 h

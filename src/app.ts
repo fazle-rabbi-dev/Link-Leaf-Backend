@@ -17,7 +17,13 @@ import envConfig from "./config/env.js";
 
 const app = express();
 
-app.use(cors({ origin: envConfig.ALLOWED_CORS_ORIGIN, credentials: true }));
+app.use(
+	cors({
+		origin: envConfig.ALLOWED_CORS_ORIGIN,
+		credentials: true,
+		allowedHeaders: ["Content-Type", "Authorization"],
+	}),
+);
 
 // temporary debug middleware — remove after verifying
 app.use((req, res, next) => {
